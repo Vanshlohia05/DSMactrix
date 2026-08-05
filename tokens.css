@@ -1,0 +1,54 @@
+/* Titan Industrial Kinetic Design System Tokens */
+:root {
+  /* Surface Layers */
+  --color-surface-obsidian: #10131a;
+  --color-surface-dim: #10131a;
+  --color-surface-bright: #363940;
+  --color-surface-container-lowest: #0b0e14;
+  --color-surface-container-low: #191c22;
+  --color-surface-container: #1d2026;
+  --color-surface-container-high: #272a31;
+  --color-surface-container-highest: #32353c;
+  --color-surface-card: #161B22;
+  --color-surface-elevated: #21262D;
+
+  /* Text & Contrast */
+  --color-on-surface: #e1e2eb;
+  --color-on-surface-variant: #e5beb2;
+  --color-outline: #ac897e;
+  --color-outline-variant: #5c4037;
+  --color-border-subtle: rgba(255, 255, 255, 0.12);
+
+  /* Primary Brand & Accents */
+  --color-primary: #ffb59c;
+  --color-primary-container: #ff5708;
+  --color-primary-accent: #facc15;
+  --color-on-primary-container: #511500;
+  --color-secondary: #c2c6d4;
+  --color-secondary-container: #444955;
+  --color-tertiary: #00daf3;
+  --color-tertiary-container: #009fb2;
+  --color-success-green: #10B981;
+
+  /* Typography Families */
+  --font-display-hero: 'Space Grotesk', system-ui, sans-serif;
+  --font-headline-lg: 'Space Grotesk', system-ui, sans-serif;
+  --font-technical-data: 'JetBrains Mono', monospace;
+  --font-label-caps: 'JetBrains Mono', monospace;
+  --font-body-md: 'Plus Jakarta Sans', system-ui, sans-serif;
+
+  /* Shapes & Geometry */
+  --radius-sm: 0.25rem;
+  --radius-default: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --radius-full: 9999px;
+
+  /* Spacing */
+  --space-container-max: 1280px;
+  --space-gutter: 24px;
+  --space-margin-mobile: 16px;
+  --space-section-gap: 80px;
+  --space-stack-unit: 8px;
+}
