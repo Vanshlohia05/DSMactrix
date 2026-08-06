@@ -1484,6 +1484,7 @@
         let currentAppSlide = 0;
         const totalAppCards = 8;
         let appAutoScrollTimer = null;
+        let isUserHovered = false;
 
         function getVisibleCardsCount() {
             if (window.innerWidth >= 1024) return 3; // Desktop: 3 cards
@@ -1498,8 +1499,8 @@
 
             const visibleCount = getVisibleCardsCount();
             const maxIndex = totalAppCards - visibleCount;
-            if (currentAppSlide > maxIndex) currentAppSlide = 0;
-            if (currentAppSlide < 0) currentAppSlide = maxIndex;
+            if (currentAppSlide > maxIndex) currentAppSlide = maxIndex;
+            if (currentAppSlide < 0) currentAppSlide = 0;
 
             const cardWidthPercent = 100 / visibleCount;
             track.style.transform = `translateX(calc(-${currentAppSlide * cardWidthPercent}% - ${currentAppSlide * 8}px))`;
@@ -1513,12 +1514,24 @@
             }
         }
 
-        function scrollAppSlider(direction) {
+        function scrollAppSlider(direction, isAuto = false) {
             const visibleCount = getVisibleCardsCount();
-            currentAppSlide += direction * visibleCount; // Advances by 3 cards on desktop!
             const maxIndex = totalAppCards - visibleCount;
-            if (currentAppSlide > maxIndex) currentAppSlide = 0;
-            if (currentAppSlide < 0) currentAppSlide = Math.max(0, maxIndex);
+
+            if (isAuto) {
+                // Stop auto-scrolling when reaching the last slide (Cards 6, 7, 8)
+                if (currentAppSlide >= maxIndex) {
+                    pauseAppAutoScroll();
+                    return;
+                }
+                currentAppSlide = Math.min(currentAppSlide + visibleCount, maxIndex);
+            } else {
+                // Manual arrow navigation
+                currentAppSlide += direction * visibleCount;
+                if (currentAppSlide > maxIndex) currentAppSlide = 0;
+                if (currentAppSlide < 0) currentAppSlide = Math.max(0, maxIndex);
+            }
+
             updateAppSlider();
         }
 
@@ -1528,14 +1541,26 @@
         }
 
         function startAppAutoScroll() {
+            isUserHovered = false;
+            const visibleCount = getVisibleCardsCount();
+            const maxIndex = totalAppCards - visibleCount;
+
+            if (currentAppSlide >= maxIndex) return; // Don't restart if already at the end
+
             if (appAutoScrollTimer) clearInterval(appAutoScrollTimer);
             appAutoScrollTimer = setInterval(() => {
-                scrollAppSlider(1);
-            }, 3800); // Auto-scrolls every 3.8 seconds
+                if (!isUserHovered) {
+                    scrollAppSlider(1, true);
+                }
+            }, 3800);
         }
 
         function pauseAppAutoScroll() {
-            if (appAutoScrollTimer) clearInterval(appAutoScrollTimer);
+            isUserHovered = true;
+            if (appAutoScrollTimer) {
+                clearInterval(appAutoScrollTimer);
+                appAutoScrollTimer = null;
+            }
         }
 
         window.addEventListener('load', () => {
