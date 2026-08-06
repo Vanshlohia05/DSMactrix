@@ -864,220 +864,393 @@
             </div>
         </section>
 
-        <!-- RECOMMENDED APPLICATIONS SLIDER (8 Big Photos + Auto Scroll Every 3 Cards) -->
+        <!-- RECOMMENDED APPLICATIONS MARQUEE (8 Big Photo Cards Continuous Infinite Marquee with Hover-to-Pause) -->
         <section class="py-8 sm:py-section-gap relative z-10 bg-transparent overflow-hidden" id="applications">
-            <div class="max-w-container-max mx-auto px-4 sm:px-6">
-                <div class="flex flex-col sm:flex-row justify-between items-start sm:items-end mb-8 sm:mb-10 gap-4">
-                    <div>
-                        <span class="font-technical-data text-xs text-amber-600 font-bold tracking-widest uppercase block mb-1">VERSATILE USAGE</span>
-                        <h2 class="font-headline-lg text-2xl sm:text-4xl text-slate-900 font-extrabold uppercase tracking-tight">Recommended Applications</h2>
-                        <p class="font-body-md text-xs sm:text-sm text-slate-600 mt-1">Tailored strength for diverse civil and commercial engineering projects (Auto-scrolls every 3 cards).</p>
+            <div class="max-w-container-max mx-auto px-4 sm:px-6 mb-6 sm:mb-10 text-center">
+                <span class="font-technical-data text-xs text-amber-600 font-bold tracking-widest uppercase block mb-1">VERSATILE USAGE</span>
+                <h2 class="font-headline-lg text-2xl sm:text-4xl text-slate-900 font-extrabold uppercase tracking-tight">Recommended Applications</h2>
+                <p class="font-body-md text-xs sm:text-sm text-slate-600 mt-2">Tailored strength for diverse civil and commercial engineering projects (Hover to pause).</p>
+            </div>
+
+            <!-- Marquee Track Wrapper with Side Gradient Fades -->
+            <div class="relative w-full overflow-hidden marquee-container py-4">
+                <div class="absolute left-0 top-0 bottom-0 w-12 sm:w-28 bg-gradient-to-r from-[#fafafa] to-transparent z-10 pointer-events-none"></div>
+                <div class="absolute right-0 top-0 bottom-0 w-12 sm:w-28 bg-gradient-to-l from-[#fafafa] to-transparent z-10 pointer-events-none"></div>
+
+                <!-- Continuous Infinite Marquee Track (Right to Left) -->
+                <div class="animate-marquee-rtl flex gap-6 sm:gap-8">
+                    
+                    <!-- Set 1 (Enlarged Photo Cards) -->
+                    <!-- Card 1: Residential Houses -->
+                    <div class="glass-card w-[310px] sm:w-[380px] rounded-2xl overflow-hidden border border-slate-200 hover:border-amber-400 hover:shadow-xl transition-all duration-300 group shrink-0 flex flex-col justify-between">
+                        <div>
+                            <div class="h-48 sm:h-52 relative overflow-hidden bg-slate-100">
+                                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80" alt="Residential House Construction" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"/>
+                                <div class="absolute top-3 left-3 bg-slate-900/80 backdrop-blur-md text-amber-400 font-technical-data text-[10px] px-3 py-1 rounded-full font-bold uppercase border border-amber-400/30">
+                                    M20 / M25 GRADE
+                                </div>
+                            </div>
+                            <div class="p-5 sm:p-6">
+                                <h3 class="font-headline-lg text-lg font-bold text-slate-900 uppercase mb-2 flex items-center gap-2">
+                                    <span>🏠</span> Residential Houses
+                                </h3>
+                                <p class="font-body-md text-xs sm:text-sm text-slate-600 leading-relaxed font-medium">
+                                    Long-lasting foundation to roof slab strength. Prevents wall dampness, micro-cracks, and efflorescence.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="px-5 sm:px-6 pb-5 border-t border-slate-100 pt-3">
+                            <span class="font-technical-data text-[10px] text-blue-700 font-bold uppercase tracking-wider block">RECOMMENDED: MAXMO &amp; ULTRIX</span>
+                        </div>
                     </div>
 
-                    <!-- Slider Nav Controls -->
-                    <div class="flex items-center gap-3">
-                        <button onclick="scrollAppSlider(-1)" aria-label="Previous Slide" class="w-10 h-10 rounded-full border border-slate-300 bg-white text-slate-700 hover:bg-slate-900 hover:text-white flex items-center justify-center shadow-sm transition-all active:scale-95">
-                            <span class="material-symbols-outlined">chevron_left</span>
-                        </button>
-                        <button onclick="scrollAppSlider(1)" aria-label="Next Slide" class="w-10 h-10 rounded-full border border-slate-300 bg-white text-slate-700 hover:bg-slate-900 hover:text-white flex items-center justify-center shadow-sm transition-all active:scale-95">
-                            <span class="material-symbols-outlined">chevron_right</span>
-                        </button>
+                    <!-- Card 2: Commercial Buildings -->
+                    <div class="glass-card w-[310px] sm:w-[380px] rounded-2xl overflow-hidden border border-slate-200 hover:border-amber-400 hover:shadow-xl transition-all duration-300 group shrink-0 flex flex-col justify-between">
+                        <div>
+                            <div class="h-48 sm:h-52 relative overflow-hidden bg-slate-100">
+                                <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&q=80" alt="Commercial Building Construction" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"/>
+                                <div class="absolute top-3 left-3 bg-slate-900/80 backdrop-blur-md text-amber-400 font-technical-data text-[10px] px-3 py-1 rounded-full font-bold uppercase border border-amber-400/30">
+                                    HIGH RCC BEAMS
+                                </div>
+                            </div>
+                            <div class="p-5 sm:p-6">
+                                <h3 class="font-headline-lg text-lg font-bold text-slate-900 uppercase mb-2 flex items-center gap-2">
+                                    <span>🏢</span> Commercial Buildings
+                                </h3>
+                                <p class="font-body-md text-xs sm:text-sm text-slate-600 leading-relaxed font-medium">
+                                    Multi-storey columns &amp; heavy load beams engineered for maximum compressive strength and rapid compaction.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="px-5 sm:px-6 pb-5 border-t border-slate-100 pt-3">
+                            <span class="font-technical-data text-[10px] text-blue-700 font-bold uppercase tracking-wider block">RECOMMENDED: DSPOWER PREMIUM</span>
+                        </div>
                     </div>
+
+                    <!-- Card 3: Bridges -->
+                    <div class="glass-card w-[310px] sm:w-[380px] rounded-2xl overflow-hidden border border-slate-200 hover:border-amber-400 hover:shadow-xl transition-all duration-300 group shrink-0 flex flex-col justify-between">
+                        <div>
+                            <div class="h-48 sm:h-52 relative overflow-hidden bg-slate-100">
+                                <img src="/bridge_construction.jpg" alt="Cable-Stayed Bridge &amp; Flyover Under Construction" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"/>
+                                <div class="absolute top-3 left-3 bg-slate-900/80 backdrop-blur-md text-amber-400 font-technical-data text-[10px] px-3 py-1 rounded-full font-bold uppercase border border-amber-400/30">
+                                    HEAVY INFRASTRUCTURE
+                                </div>
+                            </div>
+                            <div class="p-5 sm:p-6">
+                                <h3 class="font-headline-lg text-lg font-bold text-slate-900 uppercase mb-2 flex items-center gap-2">
+                                    <span>🌉</span> Bridges &amp; Flyovers
+                                </h3>
+                                <p class="font-body-md text-xs sm:text-sm text-slate-600 leading-relaxed font-medium">
+                                    High RCC piers, flyovers &amp; culverts. Delivers superior shear resistance under dynamic vehicle vibration.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="px-5 sm:px-6 pb-5 border-t border-slate-100 pt-3">
+                            <span class="font-technical-data text-[10px] text-blue-700 font-bold uppercase tracking-wider block">RECOMMENDED: DSPOWER PREMIUM</span>
+                        </div>
+                    </div>
+
+                    <!-- Card 4: Roads -->
+                    <div class="glass-card w-[310px] sm:w-[380px] rounded-2xl overflow-hidden border border-slate-200 hover:border-amber-400 hover:shadow-xl transition-all duration-300 group shrink-0 flex flex-col justify-between">
+                        <div>
+                            <div class="h-48 sm:h-52 relative overflow-hidden bg-slate-100">
+                                <img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=600&q=80" alt="Pavement Quality Concrete Road Paving Construction" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"/>
+                                <div class="absolute top-3 left-3 bg-slate-900/80 backdrop-blur-md text-amber-400 font-technical-data text-[10px] px-3 py-1 rounded-full font-bold uppercase border border-amber-400/30">
+                                    PQC HIGHWAY GRADE
+                                </div>
+                            </div>
+                            <div class="p-5 sm:p-6">
+                                <h3 class="font-headline-lg text-lg font-bold text-slate-900 uppercase mb-2 flex items-center gap-2">
+                                    <span>🛣</span> Pavement Quality Roads
+                                </h3>
+                                <p class="font-body-md text-xs sm:text-sm text-slate-600 leading-relaxed font-medium">
+                                    Pavement Quality Concrete (PQC) highways designed for high flexural strength and zero wheel rutting.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="px-5 sm:px-6 pb-5 border-t border-slate-100 pt-3">
+                            <span class="font-technical-data text-[10px] text-blue-700 font-bold uppercase tracking-wider block">RECOMMENDED: ULTRIX PPC</span>
+                        </div>
+                    </div>
+
+                    <!-- Card 5: Foundations -->
+                    <div class="glass-card w-[310px] sm:w-[380px] rounded-2xl overflow-hidden border border-slate-200 hover:border-amber-400 hover:shadow-xl transition-all duration-300 group shrink-0 flex flex-col justify-between">
+                        <div>
+                            <div class="h-48 sm:h-52 relative overflow-hidden bg-slate-100">
+                                <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=600&q=80" alt="Active Foundation Slab Concreting Dhalai" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"/>
+                                <div class="absolute top-3 left-3 bg-slate-900/80 backdrop-blur-md text-amber-400 font-technical-data text-[10px] px-3 py-1 rounded-full font-bold uppercase border border-amber-400/30">
+                                    MASS CONCRETING
+                                </div>
+                            </div>
+                            <div class="p-5 sm:p-6">
+                                <h3 class="font-headline-lg text-lg font-bold text-slate-900 uppercase mb-2 flex items-center gap-2">
+                                    <span>🏗</span> Heavy Foundations
+                                </h3>
+                                <p class="font-body-md text-xs sm:text-sm text-slate-600 leading-relaxed font-medium">
+                                    Low heat mass concreting with zero thermal cracks. Ideal for raft footings and deep foundation piles.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="px-5 sm:px-6 pb-5 border-t border-slate-100 pt-3">
+                            <span class="font-technical-data text-[10px] text-blue-700 font-bold uppercase tracking-wider block">RECOMMENDED: MAXMO CEMENT</span>
+                        </div>
+                    </div>
+
+                    <!-- Card 6: Precast Elements -->
+                    <div class="glass-card w-[310px] sm:w-[380px] rounded-2xl overflow-hidden border border-slate-200 hover:border-amber-400 hover:shadow-xl transition-all duration-300 group shrink-0 flex flex-col justify-between">
+                        <div>
+                            <div class="h-48 sm:h-52 relative overflow-hidden bg-slate-100">
+                                <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=600&q=80" alt="Precast Concrete Blocks" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"/>
+                                <div class="absolute top-3 left-3 bg-slate-900/80 backdrop-blur-md text-amber-400 font-technical-data text-[10px] px-3 py-1 rounded-full font-bold uppercase border border-amber-400/30">
+                                    RAPID MOULD RELEASE
+                                </div>
+                            </div>
+                            <div class="p-5 sm:p-6">
+                                <h3 class="font-headline-lg text-lg font-bold text-slate-900 uppercase mb-2 flex items-center gap-2">
+                                    <span>🧱</span> Precast Elements
+                                </h3>
+                                <p class="font-body-md text-xs sm:text-sm text-slate-600 leading-relaxed font-medium">
+                                    Paver blocks, precast pipes &amp; wall panels. High early green strength for efficient factory turnover.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="px-5 sm:px-6 pb-5 border-t border-slate-100 pt-3">
+                            <span class="font-technical-data text-[10px] text-blue-700 font-bold uppercase tracking-wider block">RECOMMENDED: ULTRIX PPC</span>
+                        </div>
+                    </div>
+
+                    <!-- Card 7: Industrial Floors -->
+                    <div class="glass-card w-[310px] sm:w-[380px] rounded-2xl overflow-hidden border border-slate-200 hover:border-amber-400 hover:shadow-xl transition-all duration-300 group shrink-0 flex flex-col justify-between">
+                        <div>
+                            <div class="h-48 sm:h-52 relative overflow-hidden bg-slate-100">
+                                <img src="/industrial_floor.jpg" alt="Industrial Floor Concrete Slab Concreting" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"/>
+                                <div class="absolute top-3 left-3 bg-slate-900/80 backdrop-blur-md text-amber-400 font-technical-data text-[10px] px-3 py-1 rounded-full font-bold uppercase border border-amber-400/30">
+                                    ABRASION RESISTANT
+                                </div>
+                            </div>
+                            <div class="p-5 sm:p-6">
+                                <h3 class="font-headline-lg text-lg font-bold text-slate-900 uppercase mb-2 flex items-center gap-2">
+                                    <span>🏭</span> Industrial Floors
+                                </h3>
+                                <p class="font-body-md text-xs sm:text-sm text-slate-600 leading-relaxed font-medium">
+                                    Heavy abrasion &amp; machinery wear resistance. Perfect for logistics hubs, warehouses, and factories.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="px-5 sm:px-6 pb-5 border-t border-slate-100 pt-3">
+                            <span class="font-technical-data text-[10px] text-blue-700 font-bold uppercase tracking-wider block">RECOMMENDED: DSPOWER PREMIUM</span>
+                        </div>
+                    </div>
+
+                    <!-- Card 8: Coastal Structures -->
+                    <div class="glass-card w-[310px] sm:w-[380px] rounded-2xl overflow-hidden border border-slate-200 hover:border-amber-400 hover:shadow-xl transition-all duration-300 group shrink-0 flex flex-col justify-between">
+                        <div>
+                            <div class="h-48 sm:h-52 relative overflow-hidden bg-slate-100">
+                                <img src="/coastal_structure.jpg" alt="Coastal Concrete Sea Wall and Tetrapod Breakwater Construction" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"/>
+                                <div class="absolute top-3 left-3 bg-slate-900/80 backdrop-blur-md text-amber-400 font-technical-data text-[10px] px-3 py-1 rounded-full font-bold uppercase border border-amber-400/30">
+                                    SULPHATE &amp; MARINE PROOF
+                                </div>
+                            </div>
+                            <div class="p-5 sm:p-6">
+                                <h3 class="font-headline-lg text-lg font-bold text-slate-900 uppercase mb-2 flex items-center gap-2">
+                                    <span>🌊</span> Coastal Structures
+                                </h3>
+                                <p class="font-body-md text-xs sm:text-sm text-slate-600 leading-relaxed font-medium">
+                                    Sulphate &amp; marine chloride defense. Dense micro-pore structure shields rebar against saltwater corrosion.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="px-5 sm:px-6 pb-5 border-t border-slate-100 pt-3">
+                            <span class="font-technical-data text-[10px] text-blue-700 font-bold uppercase tracking-wider block">RECOMMENDED: DSPOWER &amp; MAXMO</span>
+                        </div>
+                    </div>
+
+                    <!-- Set 2 (Duplicated for Seamless Loop) -->
+                    <!-- Card 1: Residential Houses -->
+                    <div class="glass-card w-[310px] sm:w-[380px] rounded-2xl overflow-hidden border border-slate-200 hover:border-amber-400 hover:shadow-xl transition-all duration-300 group shrink-0 flex flex-col justify-between">
+                        <div>
+                            <div class="h-48 sm:h-52 relative overflow-hidden bg-slate-100">
+                                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80" alt="Residential House Construction" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"/>
+                                <div class="absolute top-3 left-3 bg-slate-900/80 backdrop-blur-md text-amber-400 font-technical-data text-[10px] px-3 py-1 rounded-full font-bold uppercase border border-amber-400/30">
+                                    M20 / M25 GRADE
+                                </div>
+                            </div>
+                            <div class="p-5 sm:p-6">
+                                <h3 class="font-headline-lg text-lg font-bold text-slate-900 uppercase mb-2 flex items-center gap-2">
+                                    <span>🏠</span> Residential Houses
+                                </h3>
+                                <p class="font-body-md text-xs sm:text-sm text-slate-600 leading-relaxed font-medium">
+                                    Long-lasting foundation to roof slab strength. Prevents wall dampness, micro-cracks, and efflorescence.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="px-5 sm:px-6 pb-5 border-t border-slate-100 pt-3">
+                            <span class="font-technical-data text-[10px] text-blue-700 font-bold uppercase tracking-wider block">RECOMMENDED: MAXMO &amp; ULTRIX</span>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: Commercial Buildings -->
+                    <div class="glass-card w-[310px] sm:w-[380px] rounded-2xl overflow-hidden border border-slate-200 hover:border-amber-400 hover:shadow-xl transition-all duration-300 group shrink-0 flex flex-col justify-between">
+                        <div>
+                            <div class="h-48 sm:h-52 relative overflow-hidden bg-slate-100">
+                                <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&q=80" alt="Commercial Building Construction" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"/>
+                                <div class="absolute top-3 left-3 bg-slate-900/80 backdrop-blur-md text-amber-400 font-technical-data text-[10px] px-3 py-1 rounded-full font-bold uppercase border border-amber-400/30">
+                                    HIGH RCC BEAMS
+                                </div>
+                            </div>
+                            <div class="p-5 sm:p-6">
+                                <h3 class="font-headline-lg text-lg font-bold text-slate-900 uppercase mb-2 flex items-center gap-2">
+                                    <span>🏢</span> Commercial Buildings
+                                </h3>
+                                <p class="font-body-md text-xs sm:text-sm text-slate-600 leading-relaxed font-medium">
+                                    Multi-storey columns &amp; heavy load beams engineered for maximum compressive strength and rapid compaction.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="px-5 sm:px-6 pb-5 border-t border-slate-100 pt-3">
+                            <span class="font-technical-data text-[10px] text-blue-700 font-bold uppercase tracking-wider block">RECOMMENDED: DSPOWER PREMIUM</span>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: Bridges -->
+                    <div class="glass-card w-[310px] sm:w-[380px] rounded-2xl overflow-hidden border border-slate-200 hover:border-amber-400 hover:shadow-xl transition-all duration-300 group shrink-0 flex flex-col justify-between">
+                        <div>
+                            <div class="h-48 sm:h-52 relative overflow-hidden bg-slate-100">
+                                <img src="/bridge_construction.jpg" alt="Cable-Stayed Bridge &amp; Flyover Under Construction" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"/>
+                                <div class="absolute top-3 left-3 bg-slate-900/80 backdrop-blur-md text-amber-400 font-technical-data text-[10px] px-3 py-1 rounded-full font-bold uppercase border border-amber-400/30">
+                                    HEAVY INFRASTRUCTURE
+                                </div>
+                            </div>
+                            <div class="p-5 sm:p-6">
+                                <h3 class="font-headline-lg text-lg font-bold text-slate-900 uppercase mb-2 flex items-center gap-2">
+                                    <span>🌉</span> Bridges &amp; Flyovers
+                                </h3>
+                                <p class="font-body-md text-xs sm:text-sm text-slate-600 leading-relaxed font-medium">
+                                    High RCC piers, flyovers &amp; culverts. Delivers superior shear resistance under dynamic vehicle vibration.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="px-5 sm:px-6 pb-5 border-t border-slate-100 pt-3">
+                            <span class="font-technical-data text-[10px] text-blue-700 font-bold uppercase tracking-wider block">RECOMMENDED: DSPOWER PREMIUM</span>
+                        </div>
+                    </div>
+
+                    <!-- Card 4: Roads -->
+                    <div class="glass-card w-[310px] sm:w-[380px] rounded-2xl overflow-hidden border border-slate-200 hover:border-amber-400 hover:shadow-xl transition-all duration-300 group shrink-0 flex flex-col justify-between">
+                        <div>
+                            <div class="h-48 sm:h-52 relative overflow-hidden bg-slate-100">
+                                <img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=600&q=80" alt="Pavement Quality Concrete Road Paving Construction" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"/>
+                                <div class="absolute top-3 left-3 bg-slate-900/80 backdrop-blur-md text-amber-400 font-technical-data text-[10px] px-3 py-1 rounded-full font-bold uppercase border border-amber-400/30">
+                                    PQC HIGHWAY GRADE
+                                </div>
+                            </div>
+                            <div class="p-5 sm:p-6">
+                                <h3 class="font-headline-lg text-lg font-bold text-slate-900 uppercase mb-2 flex items-center gap-2">
+                                    <span>🛣</span> Pavement Quality Roads
+                                </h3>
+                                <p class="font-body-md text-xs sm:text-sm text-slate-600 leading-relaxed font-medium">
+                                    Pavement Quality Concrete (PQC) highways designed for high flexural strength and zero wheel rutting.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="px-5 sm:px-6 pb-5 border-t border-slate-100 pt-3">
+                            <span class="font-technical-data text-[10px] text-blue-700 font-bold uppercase tracking-wider block">RECOMMENDED: ULTRIX PPC</span>
+                        </div>
+                    </div>
+
+                    <!-- Card 5: Foundations -->
+                    <div class="glass-card w-[310px] sm:w-[380px] rounded-2xl overflow-hidden border border-slate-200 hover:border-amber-400 hover:shadow-xl transition-all duration-300 group shrink-0 flex flex-col justify-between">
+                        <div>
+                            <div class="h-48 sm:h-52 relative overflow-hidden bg-slate-100">
+                                <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=600&q=80" alt="Active Foundation Slab Concreting Dhalai" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"/>
+                                <div class="absolute top-3 left-3 bg-slate-900/80 backdrop-blur-md text-amber-400 font-technical-data text-[10px] px-3 py-1 rounded-full font-bold uppercase border border-amber-400/30">
+                                    MASS CONCRETING
+                                </div>
+                            </div>
+                            <div class="p-5 sm:p-6">
+                                <h3 class="font-headline-lg text-lg font-bold text-slate-900 uppercase mb-2 flex items-center gap-2">
+                                    <span>🏗</span> Heavy Foundations
+                                </h3>
+                                <p class="font-body-md text-xs sm:text-sm text-slate-600 leading-relaxed font-medium">
+                                    Low heat mass concreting with zero thermal cracks. Ideal for raft footings and deep foundation piles.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="px-5 sm:px-6 pb-5 border-t border-slate-100 pt-3">
+                            <span class="font-technical-data text-[10px] text-blue-700 font-bold uppercase tracking-wider block">RECOMMENDED: MAXMO CEMENT</span>
+                        </div>
+                    </div>
+
+                    <!-- Card 6: Precast Elements -->
+                    <div class="glass-card w-[310px] sm:w-[380px] rounded-2xl overflow-hidden border border-slate-200 hover:border-amber-400 hover:shadow-xl transition-all duration-300 group shrink-0 flex flex-col justify-between">
+                        <div>
+                            <div class="h-48 sm:h-52 relative overflow-hidden bg-slate-100">
+                                <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=600&q=80" alt="Precast Concrete Blocks" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"/>
+                                <div class="absolute top-3 left-3 bg-slate-900/80 backdrop-blur-md text-amber-400 font-technical-data text-[10px] px-3 py-1 rounded-full font-bold uppercase border border-amber-400/30">
+                                    RAPID MOULD RELEASE
+                                </div>
+                            </div>
+                            <div class="p-5 sm:p-6">
+                                <h3 class="font-headline-lg text-lg font-bold text-slate-900 uppercase mb-2 flex items-center gap-2">
+                                    <span>🧱</span> Precast Elements
+                                </h3>
+                                <p class="font-body-md text-xs sm:text-sm text-slate-600 leading-relaxed font-medium">
+                                    Paver blocks, precast pipes &amp; wall panels. High early green strength for efficient factory turnover.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="px-5 sm:px-6 pb-5 border-t border-slate-100 pt-3">
+                            <span class="font-technical-data text-[10px] text-blue-700 font-bold uppercase tracking-wider block">RECOMMENDED: ULTRIX PPC</span>
+                        </div>
+                    </div>
+
+                    <!-- Card 7: Industrial Floors -->
+                    <div class="glass-card w-[310px] sm:w-[380px] rounded-2xl overflow-hidden border border-slate-200 hover:border-amber-400 hover:shadow-xl transition-all duration-300 group shrink-0 flex flex-col justify-between">
+                        <div>
+                            <div class="h-48 sm:h-52 relative overflow-hidden bg-slate-100">
+                                <img src="/industrial_floor.jpg" alt="Industrial Floor Concrete Slab Concreting" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"/>
+                                <div class="absolute top-3 left-3 bg-slate-900/80 backdrop-blur-md text-amber-400 font-technical-data text-[10px] px-3 py-1 rounded-full font-bold uppercase border border-amber-400/30">
+                                    ABRASION RESISTANT
+                                </div>
+                            </div>
+                            <div class="p-5 sm:p-6">
+                                <h3 class="font-headline-lg text-lg font-bold text-slate-900 uppercase mb-2 flex items-center gap-2">
+                                    <span>🏭</span> Industrial Floors
+                                </h3>
+                                <p class="font-body-md text-xs sm:text-sm text-slate-600 leading-relaxed font-medium">
+                                    Heavy abrasion &amp; machinery wear resistance. Perfect for logistics hubs, warehouses, and factories.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="px-5 sm:px-6 pb-5 border-t border-slate-100 pt-3">
+                            <span class="font-technical-data text-[10px] text-blue-700 font-bold uppercase tracking-wider block">RECOMMENDED: DSPOWER PREMIUM</span>
+                        </div>
+                    </div>
+
+                    <!-- Card 8: Coastal Structures -->
+                    <div class="glass-card w-[310px] sm:w-[380px] rounded-2xl overflow-hidden border border-slate-200 hover:border-amber-400 hover:shadow-xl transition-all duration-300 group shrink-0 flex flex-col justify-between">
+                        <div>
+                            <div class="h-48 sm:h-52 relative overflow-hidden bg-slate-100">
+                                <img src="/coastal_structure.jpg" alt="Coastal Concrete Sea Wall and Tetrapod Breakwater Construction" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"/>
+                                <div class="absolute top-3 left-3 bg-slate-900/80 backdrop-blur-md text-amber-400 font-technical-data text-[10px] px-3 py-1 rounded-full font-bold uppercase border border-amber-400/30">
+                                    SULPHATE &amp; MARINE PROOF
+                                </div>
+                            </div>
+                            <div class="p-5 sm:p-6">
+                                <h3 class="font-headline-lg text-lg font-bold text-slate-900 uppercase mb-2 flex items-center gap-2">
+                                    <span>🌊</span> Coastal Structures
+                                </h3>
+                                <p class="font-body-md text-xs sm:text-sm text-slate-600 leading-relaxed font-medium">
+                                    Sulphate &amp; marine chloride defense. Dense micro-pore structure shields rebar against saltwater corrosion.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="px-5 sm:px-6 pb-5 border-t border-slate-100 pt-3">
+                            <span class="font-technical-data text-[10px] text-blue-700 font-bold uppercase tracking-wider block">RECOMMENDED: DSPOWER &amp; MAXMO</span>
+                        </div>
+                    </div>
+
                 </div>
-
-                <!-- Carousel Track Container -->
-                <div class="relative w-full overflow-hidden" id="appSliderContainer" onmouseenter="pauseAppAutoScroll()" onmouseleave="startAppAutoScroll()">
-                    <div class="flex transition-transform duration-700 ease-out gap-5 sm:gap-6" id="appSliderTrack">
-                        
-                        <!-- Card 1: Residential Houses -->
-                        <div class="w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] shrink-0 glass-card rounded-2xl overflow-hidden border border-slate-200 hover:border-amber-400 hover:shadow-xl transition-all duration-300 group flex flex-col justify-between">
-                            <div>
-                                <div class="h-48 sm:h-52 relative overflow-hidden bg-slate-100">
-                                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80" alt="Residential House Construction" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"/>
-                                    <div class="absolute top-3 left-3 bg-slate-900/80 backdrop-blur-md text-amber-400 font-technical-data text-[10px] px-3 py-1 rounded-full font-bold uppercase border border-amber-400/30">
-                                        M20 / M25 GRADE
-                                    </div>
-                                </div>
-                                <div class="p-5 sm:p-6">
-                                    <h3 class="font-headline-lg text-lg font-bold text-slate-900 uppercase mb-2 flex items-center gap-2">
-                                        <span>🏠</span> Residential Houses
-                                    </h3>
-                                    <p class="font-body-md text-xs sm:text-sm text-slate-600 leading-relaxed font-medium">
-                                        Long-lasting foundation to roof slab strength. Prevents wall dampness, micro-cracks, and efflorescence.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="px-5 sm:px-6 pb-5 border-t border-slate-100 pt-3">
-                                <span class="font-technical-data text-[10px] text-blue-700 font-bold uppercase tracking-wider block">RECOMMENDED: MAXMO &amp; ULTRIX</span>
-                            </div>
-                        </div>
-
-                        <!-- Card 2: Commercial Buildings -->
-                        <div class="w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] shrink-0 glass-card rounded-2xl overflow-hidden border border-slate-200 hover:border-amber-400 hover:shadow-xl transition-all duration-300 group flex flex-col justify-between">
-                            <div>
-                                <div class="h-48 sm:h-52 relative overflow-hidden bg-slate-100">
-                                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&q=80" alt="Commercial Building Construction" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"/>
-                                    <div class="absolute top-3 left-3 bg-slate-900/80 backdrop-blur-md text-amber-400 font-technical-data text-[10px] px-3 py-1 rounded-full font-bold uppercase border border-amber-400/30">
-                                        HIGH RCC BEAMS
-                                    </div>
-                                </div>
-                                <div class="p-5 sm:p-6">
-                                    <h3 class="font-headline-lg text-lg font-bold text-slate-900 uppercase mb-2 flex items-center gap-2">
-                                        <span>🏢</span> Commercial Buildings
-                                    </h3>
-                                    <p class="font-body-md text-xs sm:text-sm text-slate-600 leading-relaxed font-medium">
-                                        Multi-storey columns &amp; heavy load beams engineered for maximum compressive strength and rapid compaction.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="px-5 sm:px-6 pb-5 border-t border-slate-100 pt-3">
-                                <span class="font-technical-data text-[10px] text-blue-700 font-bold uppercase tracking-wider block">RECOMMENDED: DSPOWER PREMIUM</span>
-                            </div>
-                        </div>
-
-                        <!-- Card 3: Bridges -->
-                        <div class="w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] shrink-0 glass-card rounded-2xl overflow-hidden border border-slate-200 hover:border-amber-400 hover:shadow-xl transition-all duration-300 group flex flex-col justify-between">
-                            <div>
-                                <div class="h-48 sm:h-52 relative overflow-hidden bg-slate-100">
-                                    <img src="/bridge_construction.jpg" alt="Cable-Stayed Bridge &amp; Flyover Under Construction" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"/>
-                                    <div class="absolute top-3 left-3 bg-slate-900/80 backdrop-blur-md text-amber-400 font-technical-data text-[10px] px-3 py-1 rounded-full font-bold uppercase border border-amber-400/30">
-                                        HEAVY INFRASTRUCTURE
-                                    </div>
-                                </div>
-                                <div class="p-5 sm:p-6">
-                                    <h3 class="font-headline-lg text-lg font-bold text-slate-900 uppercase mb-2 flex items-center gap-2">
-                                        <span>🌉</span> Bridges &amp; Flyovers
-                                    </h3>
-                                    <p class="font-body-md text-xs sm:text-sm text-slate-600 leading-relaxed font-medium">
-                                        High RCC piers, flyovers &amp; culverts. Delivers superior shear resistance under dynamic vehicle vibration.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="px-5 sm:px-6 pb-5 border-t border-slate-100 pt-3">
-                                <span class="font-technical-data text-[10px] text-blue-700 font-bold uppercase tracking-wider block">RECOMMENDED: DSPOWER PREMIUM</span>
-                            </div>
-                        </div>
-
-                        <!-- Card 4: Roads -->
-                        <div class="w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] shrink-0 glass-card rounded-2xl overflow-hidden border border-slate-200 hover:border-amber-400 hover:shadow-xl transition-all duration-300 group flex flex-col justify-between">
-                            <div>
-                                <div class="h-48 sm:h-52 relative overflow-hidden bg-slate-100">
-                                    <img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=600&q=80" alt="Pavement Quality Concrete Road Paving Construction" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"/>
-                                    <div class="absolute top-3 left-3 bg-slate-900/80 backdrop-blur-md text-amber-400 font-technical-data text-[10px] px-3 py-1 rounded-full font-bold uppercase border border-amber-400/30">
-                                        PQC HIGHWAY GRADE
-                                    </div>
-                                </div>
-                                <div class="p-5 sm:p-6">
-                                    <h3 class="font-headline-lg text-lg font-bold text-slate-900 uppercase mb-2 flex items-center gap-2">
-                                        <span>🛣</span> Pavement Quality Roads
-                                    </h3>
-                                    <p class="font-body-md text-xs sm:text-sm text-slate-600 leading-relaxed font-medium">
-                                        Pavement Quality Concrete (PQC) highways designed for high flexural strength and zero wheel rutting.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="px-5 sm:px-6 pb-5 border-t border-slate-100 pt-3">
-                                <span class="font-technical-data text-[10px] text-blue-700 font-bold uppercase tracking-wider block">RECOMMENDED: ULTRIX PPC</span>
-                            </div>
-                        </div>
-
-                        <!-- Card 5: Foundations -->
-                        <div class="w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] shrink-0 glass-card rounded-2xl overflow-hidden border border-slate-200 hover:border-amber-400 hover:shadow-xl transition-all duration-300 group flex flex-col justify-between">
-                            <div>
-                                <div class="h-48 sm:h-52 relative overflow-hidden bg-slate-100">
-                                    <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=600&q=80" alt="Active Foundation Slab Concreting Dhalai" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"/>
-                                    <div class="absolute top-3 left-3 bg-slate-900/80 backdrop-blur-md text-amber-400 font-technical-data text-[10px] px-3 py-1 rounded-full font-bold uppercase border border-amber-400/30">
-                                        MASS CONCRETING
-                                    </div>
-                                </div>
-                                <div class="p-5 sm:p-6">
-                                    <h3 class="font-headline-lg text-lg font-bold text-slate-900 uppercase mb-2 flex items-center gap-2">
-                                        <span>🏗</span> Heavy Foundations
-                                    </h3>
-                                    <p class="font-body-md text-xs sm:text-sm text-slate-600 leading-relaxed font-medium">
-                                        Low heat mass concreting with zero thermal cracks. Ideal for raft footings and deep foundation piles.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="px-5 sm:px-6 pb-5 border-t border-slate-100 pt-3">
-                                <span class="font-technical-data text-[10px] text-blue-700 font-bold uppercase tracking-wider block">RECOMMENDED: MAXMO CEMENT</span>
-                            </div>
-                        </div>
-
-                        <!-- Card 6: Precast Elements -->
-                        <div class="w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] shrink-0 glass-card rounded-2xl overflow-hidden border border-slate-200 hover:border-amber-400 hover:shadow-xl transition-all duration-300 group flex flex-col justify-between">
-                            <div>
-                                <div class="h-48 sm:h-52 relative overflow-hidden bg-slate-100">
-                                    <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=600&q=80" alt="Precast Concrete Blocks" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"/>
-                                    <div class="absolute top-3 left-3 bg-slate-900/80 backdrop-blur-md text-amber-400 font-technical-data text-[10px] px-3 py-1 rounded-full font-bold uppercase border border-amber-400/30">
-                                        RAPID MOULD RELEASE
-                                    </div>
-                                </div>
-                                <div class="p-5 sm:p-6">
-                                    <h3 class="font-headline-lg text-lg font-bold text-slate-900 uppercase mb-2 flex items-center gap-2">
-                                        <span>🧱</span> Precast Elements
-                                    </h3>
-                                    <p class="font-body-md text-xs sm:text-sm text-slate-600 leading-relaxed font-medium">
-                                        Paver blocks, precast pipes &amp; wall panels. High early green strength for efficient factory turnover.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="px-5 sm:px-6 pb-5 border-t border-slate-100 pt-3">
-                                <span class="font-technical-data text-[10px] text-blue-700 font-bold uppercase tracking-wider block">RECOMMENDED: ULTRIX PPC</span>
-                            </div>
-                        </div>
-
-                        <!-- Card 7: Industrial Floors -->
-                        <div class="w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] shrink-0 glass-card rounded-2xl overflow-hidden border border-slate-200 hover:border-amber-400 hover:shadow-xl transition-all duration-300 group flex flex-col justify-between">
-                            <div>
-                                <div class="h-48 sm:h-52 relative overflow-hidden bg-slate-100">
-                                    <img src="/industrial_floor.jpg" alt="Industrial Floor Concrete Slab Concreting" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"/>
-                                    <div class="absolute top-3 left-3 bg-slate-900/80 backdrop-blur-md text-amber-400 font-technical-data text-[10px] px-3 py-1 rounded-full font-bold uppercase border border-amber-400/30">
-                                        ABRASION RESISTANT
-                                    </div>
-                                </div>
-                                <div class="p-5 sm:p-6">
-                                    <h3 class="font-headline-lg text-lg font-bold text-slate-900 uppercase mb-2 flex items-center gap-2">
-                                        <span>🏭</span> Industrial Floors
-                                    </h3>
-                                    <p class="font-body-md text-xs sm:text-sm text-slate-600 leading-relaxed font-medium">
-                                        Heavy abrasion &amp; machinery wear resistance. Perfect for logistics hubs, warehouses, and factories.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="px-5 sm:px-6 pb-5 border-t border-slate-100 pt-3">
-                                <span class="font-technical-data text-[10px] text-blue-700 font-bold uppercase tracking-wider block">RECOMMENDED: DSPOWER PREMIUM</span>
-                            </div>
-                        </div>
-
-                        <!-- Card 8: Coastal Structures -->
-                        <div class="w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] shrink-0 glass-card rounded-2xl overflow-hidden border border-slate-200 hover:border-amber-400 hover:shadow-xl transition-all duration-300 group flex flex-col justify-between">
-                            <div>
-                                <div class="h-48 sm:h-52 relative overflow-hidden bg-slate-100">
-                                    <img src="/coastal_structure.jpg" alt="Coastal Concrete Sea Wall and Tetrapod Breakwater Construction" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"/>
-                                    <div class="absolute top-3 left-3 bg-slate-900/80 backdrop-blur-md text-amber-400 font-technical-data text-[10px] px-3 py-1 rounded-full font-bold uppercase border border-amber-400/30">
-                                        SULPHATE &amp; MARINE PROOF
-                                    </div>
-                                </div>
-                                <div class="p-5 sm:p-6">
-                                    <h3 class="font-headline-lg text-lg font-bold text-slate-900 uppercase mb-2 flex items-center gap-2">
-                                        <span>🌊</span> Coastal Structures
-                                    </h3>
-                                    <p class="font-body-md text-xs sm:text-sm text-slate-600 leading-relaxed font-medium">
-                                        Sulphate &amp; marine chloride defense. Dense micro-pore structure shields rebar against saltwater corrosion.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="px-5 sm:px-6 pb-5 border-t border-slate-100 pt-3">
-                                <span class="font-technical-data text-[10px] text-blue-700 font-bold uppercase tracking-wider block">RECOMMENDED: DSPOWER &amp; MAXMO</span>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-                <!-- Dots Indicator -->
-                <div class="flex justify-center items-center gap-2 mt-6" id="appSliderDots"></div>
             </div>
         </section>
 
