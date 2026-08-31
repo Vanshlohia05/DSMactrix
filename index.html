@@ -1295,7 +1295,7 @@
 
 
 
-        <!-- LIVE CEMENT & MATERIAL CALCULATOR SECTION -->
+        <!-- HIDDEN: LIVE CEMENT & MATERIAL CALCULATOR SECTION (commented out, kept for future use)
         <section class="py-8 sm:py-section-gap bg-slate-100 relative border-t border-slate-200 z-10" id="calculator">
             <div class="max-w-container-max mx-auto px-4 sm:px-6">
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-12 items-center">
@@ -1369,7 +1369,7 @@
                 </div>
             </div>
         </section>
-
+        END HIDDEN CALCULATOR SECTION -->
         <!-- VERIFIED CONTRACTOR REVIEWS -->
         <section class="py-8 sm:py-section-gap relative z-10 bg-transparent" id="reviews">
             <div class="max-w-container-max mx-auto px-4 sm:px-6">
@@ -1670,6 +1670,7 @@
             });
         }
 
+        /* HIDDEN: Calculator JS functions (commented out with calculator section)
         function runCalculation() {
             const length = parseFloat(document.getElementById('calcLength').value) || 0;
             const width = parseFloat(document.getElementById('calcWidth').value) || 0;
@@ -1697,6 +1698,7 @@
             const msg = `Hello KS Marketing! I calculated my project requirement via your estimator:\n\n- Dimensions: ${length}ft x ${width}ft x ${thickness}in\n- Cement Bags: ${bags} Bags (50kg)\n- Tonnage: ${tonnes} Metric Tonnes\n\nPlease share the live factory bulk price.`;
             window.open(`https://wa.me/9181314149?text=${encodeURIComponent(msg)}`, '_blank');
         }
+        END HIDDEN CALCULATOR JS */
 
         function triggerQuickQuote() {
             const district = document.getElementById('calcDistrict') ? document.getElementById('calcDistrict').value : 'Guwahati';
