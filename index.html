@@ -89,6 +89,10 @@
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@700;800&display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
 
+    <!-- Lenis Inertia Smooth Scroll Library -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+
     <!-- Schema.org JSON-LD for Search Engines -->
     <script type="application/ld+json">
     {
@@ -247,6 +251,40 @@
 
         .hide-scrollbar::-webkit-scrollbar { display: none; }
         .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+        /* Smooth Physics Scrolling & Performance Enhancements */
+        html.lenis, html.lenis body {
+            height: auto;
+        }
+        .lenis.lenis-smooth {
+            scroll-behavior: auto !important;
+        }
+        .lenis.lenis-smooth [data-lenis-prevent] {
+            overscroll-behavior: contain;
+        }
+        .lenis.lenis-stopped {
+            overflow: hidden;
+        }
+        .lenis.lenis-smooth iframe {
+            pointer-events: none;
+        }
+
+        /* Catalog & Slider Horizontal Snap & Drag Scroll */
+        #productGrid {
+            scroll-snap-type: x mandatory;
+            scroll-padding: 0 16px;
+            -webkit-overflow-scrolling: touch;
+            cursor: grab;
+            user-select: none;
+        }
+        #productGrid.cursor-grabbing {
+            cursor: grabbing;
+        }
+        .product-card {
+            scroll-snap-align: start;
+            backface-visibility: hidden;
+            will-change: transform;
+        }
 
         /* Infinite Right-to-Left Marquee Animation */
         @keyframes marqueeRtl {
@@ -1670,9 +1708,77 @@
             }
         }
 
+        // Initialize Lenis Inertia Physics Smooth Scroll
+        let lenis = null;
+        if (typeof Lenis !== 'undefined') {
+            lenis = new Lenis({
+                duration: 1.2,
+                easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+                orientation: 'vertical',
+                gestureOrientation: 'vertical',
+                smoothWheel: true,
+                wheelMultiplier: 1.0,
+                touchMultiplier: 1.2,
+                infinite: false,
+            });
+
+            function raf(time) {
+                lenis.raf(time);
+                requestAnimationFrame(raf);
+            }
+            requestAnimationFrame(raf);
+        }
+
+        // Smooth Anchor Links Navigation with Header Offset
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const targetId = this.getAttribute('href');
+                if (!targetId || targetId === '#') return;
+                const targetElem = document.querySelector(targetId);
+                if (targetElem) {
+                    e.preventDefault();
+                    if (lenis) {
+                        lenis.scrollTo(targetElem, { offset: -80, duration: 1.2 });
+                    } else {
+                        targetElem.scrollIntoView({ behavior: 'smooth' });
+                    }
+                }
+            });
+        });
+
+        // Desktop Mouse Drag-to-Scroll for Product Catalog Carousel
         window.addEventListener('load', () => {
             updateAppSlider();
             startAppAutoScroll();
+
+            const catalogTrack = document.getElementById('productGrid');
+            if (catalogTrack) {
+                let isDown = false;
+                let startX;
+                let scrollLeft;
+
+                catalogTrack.addEventListener('mousedown', (e) => {
+                    isDown = true;
+                    catalogTrack.classList.add('cursor-grabbing');
+                    startX = e.pageX - catalogTrack.offsetLeft;
+                    scrollLeft = catalogTrack.scrollLeft;
+                });
+                catalogTrack.addEventListener('mouseleave', () => {
+                    isDown = false;
+                    catalogTrack.classList.remove('cursor-grabbing');
+                });
+                catalogTrack.addEventListener('mouseup', () => {
+                    isDown = false;
+                    catalogTrack.classList.remove('cursor-grabbing');
+                });
+                catalogTrack.addEventListener('mousemove', (e) => {
+                    if (!isDown) return;
+                    e.preventDefault();
+                    const x = e.pageX - catalogTrack.offsetLeft;
+                    const walk = (x - startX) * 1.6;
+                    catalogTrack.scrollLeft = scrollLeft - walk;
+                });
+            }
         });
         window.addEventListener('resize', updateAppSlider);
     </script>
