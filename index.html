@@ -10,7 +10,7 @@
     <link rel="dns-prefetch" href="https://images.unsplash.com"/>
     <title>DS Power Cement</title>
     <meta name="title" content="DS Power Cement"/>
-    <meta name="description" content="Buy DSPOWER and ULTRIX PPC cement from K S Enterprise serving Guwahati and Assam. Product specifications, bulk orders, delivery support and WhatsApp quotes available."/>
+    <meta name="description" content="Buy DSPOWER and ULTRIX PPC cement from K S Enterprise. Supply across Guwahati and entire North East. Product specifications, bulk orders, delivery support and WhatsApp quotes available."/>
     <meta name="keywords" content="DSPOWER CEMENT, ULTRIX CEMENT, PPC Cement, Dhalai Power, Portland Pozzolana Cement, Fly Ash Cement, cement supplier Guwahati, cement supplier Assam, K S Enterprise"/>
     <meta name="robots" content="index, follow"/>
     <meta name="author" content="K S Enterprise"/>
@@ -22,7 +22,7 @@
     <meta property="og:type" content="website"/>
     <meta property="og:url" content="https://www.dspowercement.com/"/>
     <meta property="og:title" content="DS Power Cement"/>
-    <meta property="og:description" content="Buy DSPOWER and ULTRIX PPC cement from K S Enterprise serving Guwahati and Assam. Product specifications, bulk orders, delivery support and WhatsApp quotes available."/>
+    <meta property="og:description" content="Buy DSPOWER and ULTRIX PPC cement from K S Enterprise. Supply across Guwahati and entire North East. Product specifications, bulk orders, delivery support and WhatsApp quotes available."/>
     <meta property="og:image" content="https://www.dspowercement.com/dspower_premium_bag.jpg"/>
 
     <!-- Web App Manifest -->
@@ -75,8 +75,8 @@
           "priceRange": "₹₹",
           "openingHoursSpecification": {
             "@type": "OpeningHoursSpecification",
-            "opens": "10:00",
-            "closes": "16:00"
+            "opens": "00:00",
+            "closes": "23:59"
           },
           "address": {
             "@type": "PostalAddress",
@@ -141,7 +141,7 @@
           "@id": "https://www.dspowercement.com/#webpage",
           "url": "https://www.dspowercement.com",
           "name": "DS Power Cement — K S Enterprise | Guwahati, Assam",
-          "description": "Buy DSPOWER and ULTRIX PPC cement from K S Enterprise serving Guwahati and Assam. Product specifications, bulk orders, delivery support and WhatsApp quotes available.",
+          "description": "Buy DSPOWER and ULTRIX PPC cement from K S Enterprise. Supply across Guwahati and entire North East. Product specifications, bulk orders, delivery support and WhatsApp quotes available.",
           "isPartOf": {
             "@id": "https://www.dspowercement.com/#website"
           },
@@ -995,14 +995,14 @@
                                 <td class="p-4 sm:p-5 text-slate-900 font-bold flex items-center gap-2.5">
                                     <span class="material-symbols-outlined text-amber-800 text-[18px]">roofing</span> Roof Slabs &amp; Load Beams
                                 </td>
-                                <td class="p-4 sm:p-5 font-technical-data text-blue-700 font-bold">DS Dhalai Power &amp; DSPower Premium</td>
+                                <td class="p-4 sm:p-5 font-technical-data text-blue-700 font-bold">DS Dhalai Power</td>
                                 <td class="p-4 sm:p-5">Rapid early strength development &amp; heavy RCC slab compaction.</td>
                             </tr>
                             <tr class="hover:bg-slate-50 transition-colors">
                                 <td class="p-4 sm:p-5 text-slate-900 font-bold flex items-center gap-2.5">
                                     <span class="material-symbols-outlined text-sky-600 text-[18px]">water_drop</span> Residential Homes &amp; Foundations
                                 </td>
-                                <td class="p-4 sm:p-5 font-technical-data text-blue-700 font-bold">DS Dhalai Power &amp; DSPower Premium</td>
+                                <td class="p-4 sm:p-5 font-technical-data text-blue-700 font-bold">DS Dhalai Power</td>
                                 <td class="p-4 sm:p-5">30% Fly Ash PPC formulation for long-term structural durability.</td>
                             </tr>
                             <tr class="hover:bg-slate-50 transition-colors">
@@ -1318,8 +1318,8 @@
                     </div>
                 </div>
 
-                <!-- Scrolling Carousel Container -->
-                <div id="reviewSlider" class="flex gap-6 overflow-x-auto scroll-smooth pb-4 no-scrollbar snap-x snap-mandatory" onmouseenter="pauseReviewAutoScroll()" onmouseleave="startReviewAutoScroll()">
+                <!-- Scrolling Carousel Container (Manual Scroll) -->
+                <div id="reviewSlider" class="flex gap-6 overflow-x-auto scroll-smooth pb-4 no-scrollbar snap-x snap-mandatory">
                     
                     <!-- Review 1: SS BUILDERS, GUWAHATI -->
                     <div class="glass-card p-5 sm:p-6 rounded-2xl flex flex-col justify-between w-[300px] sm:w-[360px] shrink-0 snap-start shadow-sm border border-slate-200/80">
@@ -1688,8 +1688,8 @@
         <div class="grid grid-cols-1 md:grid-cols-4 gap-6 sm:gap-8 px-4 sm:px-6 py-8 sm:py-12 max-w-container-max mx-auto">
             <div>
                 <div class="font-headline-lg text-white font-bold text-base mb-2 sm:mb-3 uppercase">K S ENTERPRISE</div>
-                <p class="leading-relaxed opacity-80 text-xs mb-2">DSPOWER &amp; ULTRIX PPC Cement supply across Guwahati and Assam.</p>
-                <div class="text-[11px] text-slate-400 mb-2">10:00 AM – 4:00 PM • 24*7 Available on WhatsApp</div>
+                <p class="leading-relaxed opacity-80 text-xs mb-2">Supply across Guwahati and entire North East.</p>
+                <div class="text-[11px] text-slate-400 mb-2">24*7 Available on WhatsApp</div>
                 <p class="text-[11px] text-slate-400">© 2026 K S Enterprise • All rights reserved.</p>
             </div>
 
@@ -1741,37 +1741,12 @@
             }
         }
 
-        // Review Carousel Navigation & Autoscroll
-        let reviewAutoScrollTimer = null;
+        // Review Carousel Navigation (Manual Scroll Only)
         function scrollReviewSlider(direction) {
             const slider = document.getElementById('reviewSlider');
             if (!slider) return;
             slider.scrollBy({ left: direction * 380, behavior: 'smooth' });
         }
-
-        function startReviewAutoScroll() {
-            if (reviewAutoScrollTimer) clearInterval(reviewAutoScrollTimer);
-            reviewAutoScrollTimer = setInterval(() => {
-                const slider = document.getElementById('reviewSlider');
-                if (!slider) return;
-                if (slider.scrollLeft + slider.clientWidth >= slider.scrollWidth - 10) {
-                    slider.scrollTo({ left: 0, behavior: 'smooth' });
-                } else {
-                    slider.scrollBy({ left: 380, behavior: 'smooth' });
-                }
-            }, 5000);
-        }
-
-        function pauseReviewAutoScroll() {
-            if (reviewAutoScrollTimer) {
-                clearInterval(reviewAutoScrollTimer);
-                reviewAutoScrollTimer = null;
-            }
-        }
-
-        window.addEventListener('load', () => {
-            startReviewAutoScroll();
-        });
 
         
 
