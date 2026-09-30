@@ -6,10 +6,17 @@
   "type": "module",
   "scripts": {
     "dev": "vite --host --open",
-    "build": "npx vite build",
+    "build:css": "tailwindcss -i ./src/input.css -o ./public/assets/site.min.css --minify",
+    "build": "npm run build:css && vite build",
     "preview": "vite preview"
   },
   "dependencies": {
     "vite": "^5.4.2"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.6.1",
+    "clean-css-cli": "^5.6.3",
+    "postcss": "^8.5.28",
+    "tailwindcss": "^3.4.17"
   }
 }
