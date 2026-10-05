@@ -1,8 +1,8 @@
 {
-  "name": "titan-cement-distributors",
+  "name": "ds-power-cement",
   "private": true,
   "version": "2.0.0",
-  "description": "Multi-Brand Industrial Cement Seller & Dealer Platform",
+  "description": "DS Power & Ultrix Cement Wholesale Platform - K S Enterprise",
   "type": "module",
   "scripts": {
     "dev": "vite --host --open",
